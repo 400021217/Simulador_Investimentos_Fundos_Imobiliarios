@@ -1,0 +1,129 @@
+# Projeto: Simulador de Investimentos em Fundos Imobiliários (FIIs)
+
+> Uma ferramenta simples para projetar patrimônio e dividendos mensais investindo em FIIs, considerando diferentes perfis de investidor.
+
+---
+
+## Sumário
+
+- [Descrição](#descrição)  
+- [Pré-requisitos](#pré-requisitos)  
+- [Configurações](#configurações)  
+- [Simulação de Investimento](#simulação-de-investimento)  
+  - [Parâmetros de Entrada](#parâmetros-de-entrada)  
+  - [Resultados](#resultados)  
+- [Cenários de Dividendos](#cenários-de-dividendos)  
+- [Perfis de Investidor & Alocação](#perfis-de-investidor--alocação)  
+- [Próximos Passos](#próximos-passos)  
+- [Licença](#licença)
+
+---
+
+## Descrição
+
+Este projeto simula aportes mensais em Fundos Imobiliários (FIIs) ao longo de um período definido, gera projeção de patrimônio acumulado e estimativa de dividendos mensais, e recomenda alocação por tipo de FII conforme três perfis de investidor: Conservador, Moderado e Agressivo.
+
+---
+
+## Pré-requisitos
+
+- Python 3.x (ou sua linguagem/plataforma preferida)  
+- Bibliotecas para leitura de .xlsx (por exemplo, `openpyxl`, `pandas`)  
+- Ambiente para visualização de tabelas Markdown (GitHub, GitLab etc.)
+
+---
+
+## Configurações
+
+| Parâmetro                        | Valor           | Descrição                                        |
+|----------------------------------|-----------------|--------------------------------------------------|
+| **Salário**                      | R$ 4 000,00     | Base de cálculo (opcional)                       |
+| **Rendimento da carteira**       | 1 % a.m.        | Meta de rendimento médio mensal                  |
+| **Investimento mensal**          | R$ 500,00       | Aporte fixo todo mês                             |
+| **Horizonte de investimento**    | 5 anos          | Período de aplicação                             |
+| **Taxa de rendimento mensal**    | 1,07 %          | Valor exato usado nos cálculos (0,0107 a.m.)     |
+
+---
+
+## Simulação de Investimento
+
+### Parâmetros de Entrada
+
+1. Aporte mensal: **R$ 500,00**  
+2. Prazo: **5 anos**  
+3. Rentabilidade média: **1,07 % ao mês**  
+
+### Resultados
+
+| Métrica                   | Valor                     |
+|---------------------------|---------------------------|
+| Patrimônio acumulado      | R$ 41 766,73              |
+| Dividendos mensais esperados | R$ 417,67               |
+
+---
+
+## Cenários de Dividendos
+
+Projeção de dividendos mensais conforme diferentes horizontes de tempo, mantendo condições de aporte e rendimento constantes.
+
+| Tempo (anos) | Dividendos Mensais (R$) |
+|--------------|-------------------------|
+| 2            | 135,99                  |
+| 4            | 311,56                  |
+| 10           | 1 208,65                |
+| 20           | 5 543,48                |
+| 30           | 21 090,38               |
+
+---
+
+## Perfis de Investidor & Alocação
+
+Cada perfil recebe uma sugestão de alocação percentual em seis categorias de FIIs.
+
+### 1. Conservador
+
+| Tipo de FII     | % Alocação |
+|-----------------|------------|
+| Papel           | 30 %       |
+| Tijolo          | 50 %       |
+| Híbridos        | 10 %       |
+| FOFs            | 10 %       |
+| Desenvolvimento | 0 %        |
+| Hotelarias      | 0 %        |
+
+### 2. Moderado
+
+| Tipo de FII     | % Alocação |
+|-----------------|------------|
+| Papel           | 30 %       |
+| Tijolo          | 42 %       |
+| Híbridos        | 8 %        |
+| FOFs            | 10 %       |
+| Desenvolvimento | 10 %       |
+| Hotelarias      | 0 %        |
+
+### 3. Agressivo
+
+| Tipo de FII     | % Alocação |
+|-----------------|------------|
+| Papel           | 55 %       |
+| Tijolo          | 10 %       |
+| Híbridos        | 5 %        |
+| FOFs            | 5 %        |
+| Desenvolvimento | 15 %       |
+| Hotelarias      | 10 %       |
+
+---
+
+## Próximos Passos
+
+- Validar cálculos com outras taxas de rendimento  
+- Permitir reinvestimento automático de dividendos  
+- Integrar API de FIIs para dados em tempo real  
+- Gerar gráficos e relatórios dinâmicos  
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).  
